@@ -347,62 +347,56 @@ h1, h2, h3 {
 
 /* =========================================
    スマホ・タブレット用（画面幅768px以下）
-   ↓ ここから下が新規追加・調整部分です ↓
    ========================================= */
 @media screen and (max-width: 768px) {
 
-    /* 1. 背景画像の調整 */
+    /* 1. 背景画像の調整（強制適用） */
     body {
-        /* スマホでは「固定」を解除（iOSでのバグ防止） */
-        background-attachment: scroll;
-        /* 背景の位置を微調整 */
-        background-position: center center;
+        background-attachment: scroll !important; /* スクロール固定解除 */
+        background-position: center center !important;
     }
 
     /* 2. ヒーロー画像（トップ画像）の調整 */
     .hero {
-        /* スマホでは高さを画面いっぱい(100vh)にせず、60%くらいにする */
-        /* これによりズームされすぎるのを防ぎます */
-        height: 60vh; 
+        /* 高さを画面の65%に抑える */
+        height: 65vh !important;
         
-        /* 画像の位置調整 */
-        background-position: center center; 
+        /* 画像の位置を「中央・上」にする（顔が切れないように） */
+        background-position: center top !important; 
     }
 
     /* 3. タイトル文字の調整 */
     .hero-content h1 {
-        /* 文字サイズを小さく */
-        font-size: 2.2rem; 
+        font-size: 2.2rem !important; 
         padding: 0.5rem 1rem;
         width: 90%; 
         margin: 0 auto;
     }
     
     .hero-content p {
-        font-size: 1rem;
+        font-size: 1rem !important;
         width: 90%;
         margin: 1rem auto 0;
     }
 
     /* 4. メニューボタンの調整 */
     .menu-toggle {
-        /* スマホで3倍は大きすぎるため、少し抑える（2倍） */
-        transform: scale(2); 
+        transform: scale(2) !important; /* 強制的に2倍に */
         margin-right: 15px; 
     }
     
     /* 5. レイアウトの調整 */
     .section-container {
-        padding: 3rem 1rem; /* 左右の余白を少し詰める */
+        padding: 3rem 1rem !important;
     }
     
     .glass-box {
-        padding: 2rem 1.5rem; /* 箱の中の余白も調整 */
+        padding: 2rem 1.5rem !important;
     }
     
     /* 6. グリッドの調整（スマホでは1列にする） */
     .grid-container {
-        grid-template-columns: 1fr; /* 1カラム強制 */
+        grid-template-columns: 1fr !important;
         gap: 2rem;
     }
 }
