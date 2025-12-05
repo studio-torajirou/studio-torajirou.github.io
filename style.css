@@ -35,7 +35,7 @@ body::before {
     
     background-image: 
         linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-        url('https://orewatasi100-lang.github.io/studio_torajirou/asako_gemin-rogo.jpg');
+        url('asako_gemin-rogo.jpg');
     
     background-size: cover;
     background-position: center;
@@ -215,7 +215,7 @@ h1, h2, h3 {
    ========================================= */
 .hero {
     height: 100vh;
-    background-image: url('https://orewatasi100-lang.github.io/studio_torajirou/asako_gemin-3.png');
+    background-image: url('asako_gemin-3.png');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -391,7 +391,7 @@ h1, h2, h3 {
 }
 
 .footer {
-    background-color: var(--accent-color);
+    background-color: var(--primary-color); /* ここを変更しました */
     color: white;
     text-align: center;
     padding: 2rem;
@@ -407,7 +407,8 @@ h1, h2, h3 {
     opacity: 0;
     transform: translateY(40px);
     filter: blur(10px); /* ★ここがボヤッとの正体 */
-    transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1); /* 自然な動き */
+    transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+    /* 自然な動き */
 }
 
 /* 画面に入った時：元の位置に戻り、くっきりする */
@@ -422,7 +423,8 @@ h1, h2, h3 {
     transition-delay: 0.2s; /* 0.2秒遅れ */
 }
 .delay-2 {
-    transition-delay: 0.4s; /* 0.4秒遅れ */
+    transition-delay: 0.4s;
+    /* 0.4秒遅れ */
 }
 
 .fade-in-up {
@@ -458,7 +460,7 @@ h1, h2, h3 {
     }
 
     .hero-content h1 {
-        font-size: 2.2rem !important; 
+        font-size: 2.2rem !important;
         padding: 0.5rem 1rem;
         width: 90%; 
         margin: 0 auto;
