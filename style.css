@@ -33,10 +33,10 @@ body::before {
     height: 100vh;
     z-index: -1;
     
-    /* GAS管理画面に合わせてファイル名を変更済み */
+    /* ▼▼▼ 元のファイル名に戻しました ▼▼▼ */
     background-image: 
         linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-        url('hero-bg.jpg'); 
+        url('asako_gemin-rogo.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -163,18 +163,14 @@ h1, h2, h3 {
     display: none;
 }
 
-/* ▼▼▼ メニュー背景をグラデーションに変更 ▼▼▼ */
+/* メニュー背景：グラデーション */
 .nav-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    
-    /* 変更前: background: rgba(255, 255, 255, 0.95); */
-    /* 変更後: 淡いオレンジからグリーンへのグラデーション */
     background: linear-gradient(135deg, rgba(255, 245, 230, 0.98), rgba(230, 255, 250, 0.98));
-    
     backdrop-filter: blur(15px);
     display: flex;
     justify-content: center;
@@ -220,8 +216,8 @@ h1, h2, h3 {
    ========================================= */
 .hero {
     height: 100vh;
-    /* GAS管理画面に合わせてファイル名を変更済み */
-    background-image: url('hero-bg.jpg');
+    /* ▼▼▼ 元のファイル名に戻しました ▼▼▼ */
+    background-image: url('asako_gemin-3.png');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -294,7 +290,7 @@ h1, h2, h3 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 3rem;
-    align-items: start; /* 画像の高さをなりゆきにするために重要 */
+    align-items: start;
 }
 
 /* --- ボタン演出（パルス） --- */
@@ -311,7 +307,6 @@ h1, h2, h3 {
     transition: transform 0.3s;
 }
 
-/* フワフワ鼓動するアニメーション定義 */
 @keyframes pulse {
     0% {
         box-shadow: 0 0 0 0 rgba(243, 152, 0, 0.7);
@@ -417,12 +412,11 @@ h1, h2, h3 {
 /* 画像の比率を維持して、すべてを表示する */
 .class-img {
     width: 100%;
-    height: auto; /* 高さを指定せず、画像のなりゆきに任せる */
-    object-fit: contain; /* 切り取らずに全体を見せる */
+    height: auto;
+    object-fit: contain;
     display: block;
 }
 
-/* 説明文の改行などを自然に見せる */
 .class-item p {
     text-align: left;
     margin-top: 1rem;
@@ -430,7 +424,6 @@ h1, h2, h3 {
     line-height: 1.8;
 }
 
-/* カード自体の高さを揃えず、自然な長さに */
 .class-item {
     height: auto;
     background: rgba(255, 255, 255, 0.4);
@@ -452,17 +445,16 @@ h1, h2, h3 {
 .map-container {
     width: 100%;
     overflow: hidden;
-    border-radius: 12px; /* 角を丸くして優しく */
+    border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     margin-bottom: 2rem;
-    border: 4px solid rgba(255, 255, 255, 0.5); /* 写真のような白い縁取り */
+    border: 4px solid rgba(255, 255, 255, 0.5);
 }
 
-/* 「マップで開く」ボタンを少し小さめにアレンジ */
 .map-link-btn {
     font-size: 1rem;
     padding: 0.8rem 2rem;
-    background: linear-gradient(135deg, #67C5B5, #5aafa0); /* 緑系の色に変更 */
+    background: linear-gradient(135deg, #67C5B5, #5aafa0);
     box-shadow: 0 4px 15px rgba(103, 197, 181, 0.3);
 }
 
