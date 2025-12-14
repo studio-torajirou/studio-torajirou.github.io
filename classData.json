@@ -4,5 +4,11 @@
     "title": "夜の海辺",
     "text": "夜の海辺でヨガは気持ちが良い",
     "image": "class1.jpg"
+  },
+  {
+    "id": 2,
+    "title": "ハンドスタンド",
+    "text": "逆立ちです",
+    "image": "class2.jpg"
   }
 ]
