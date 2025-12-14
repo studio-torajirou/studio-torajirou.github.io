@@ -33,9 +33,10 @@ body::before {
     height: 100vh;
     z-index: -1;
     
+    /* GAS管理画面に合わせてファイル名を変更済み */
     background-image: 
         linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-        url('asako_gemin-rogo.jpg');
+        url('hero-bg.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -162,13 +163,18 @@ h1, h2, h3 {
     display: none;
 }
 
+/* ▼▼▼ メニュー背景をグラデーションに変更 ▼▼▼ */
 .nav-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(255, 255, 255, 0.95);
+    
+    /* 変更前: background: rgba(255, 255, 255, 0.95); */
+    /* 変更後: 淡いオレンジからグリーンへのグラデーション */
+    background: linear-gradient(135deg, rgba(255, 245, 230, 0.98), rgba(230, 255, 250, 0.98));
+    
     backdrop-filter: blur(15px);
     display: flex;
     justify-content: center;
@@ -214,7 +220,8 @@ h1, h2, h3 {
    ========================================= */
 .hero {
     height: 100vh;
-    background-image: url('asako_gemin-3.png');
+    /* GAS管理画面に合わせてファイル名を変更済み */
+    background-image: url('hero-bg.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -431,6 +438,36 @@ h1, h2, h3 {
     border-radius: 12px;
     margin-bottom: 1rem;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* =========================================
+   アクセス・地図エリア
+   ========================================= */
+.address-text {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 2;
+}
+
+.map-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px; /* 角を丸くして優しく */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    border: 4px solid rgba(255, 255, 255, 0.5); /* 写真のような白い縁取り */
+}
+
+/* 「マップで開く」ボタンを少し小さめにアレンジ */
+.map-link-btn {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+    background: linear-gradient(135deg, #67C5B5, #5aafa0); /* 緑系の色に変更 */
+    box-shadow: 0 4px 15px rgba(103, 197, 181, 0.3);
+}
+
+.map-link-btn:hover {
+    transform: translateY(-3px);
 }
 
 /* =========================================
