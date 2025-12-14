@@ -16,14 +16,14 @@
         var date = new Date();
         var cssLink = document.createElement("link");
         cssLink.rel = "stylesheet";
-        // 現在時刻をパラメータにつけることで、毎回違うファイルとして認識させる（＝キャッシュさせない）
         cssLink.href = "style.css?ver=" + date.getTime();
         document.head.appendChild(cssLink);
     </script>
     <noscript>
         <link rel="stylesheet" href="style.css">
     </noscript>
-    </head>
+    
+</head>
 <body>
 
     <header id="header" class="header">
@@ -43,7 +43,7 @@
                 <ul class="nav-list">
                     <li><a href="#top">HOME</a></li>
                     <li><a href="#concept">コンセプト</a></li>
-                    <li><a href="#class">クラス紹介</a></li>
+                    <li><a href="#topics">トピックス</a></li>
                     <li><a href="#price">料金・システム</a></li>
                     <li><a href="#greeting">ごあいさつ</a></li>
                     <li><a href="#access">アクセス</a></li>
@@ -80,9 +80,9 @@
             </div>
         </section>
 
-        <section id="class" class="section-container" style="scroll-margin-top: 100px;">
+        <section id="topics" class="section-container" style="scroll-margin-top: 100px;">
             <div class="glass-box">
-                <h2 class="section-title fade-in-scroll">Class</h2>
+                <h2 class="section-title fade-in-scroll">Topics</h2>
                 
                 <div id="dynamic-class-list" class="grid-container">
                     <p style="text-align:center; width:100%; color:#666;">Loading...</p>
