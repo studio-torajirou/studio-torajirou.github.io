@@ -33,7 +33,7 @@ body::before {
     height: 100vh;
     z-index: -1;
     
-    /* ▼▼▼ 元のファイル名に戻しました ▼▼▼ */
+    /* 背景画像：元の正しいファイル名 */
     background-image: 
         linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
         url('asako_gemin-rogo.jpg');
@@ -216,7 +216,7 @@ h1, h2, h3 {
    ========================================= */
 .hero {
     height: 100vh;
-    /* ▼▼▼ 元のファイル名に戻しました ▼▼▼ */
+    /* トップ画像：元の正しいファイル名 */
     background-image: url('asako_gemin-3.png');
     background-size: cover;
     background-position: center;
