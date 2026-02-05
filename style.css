@@ -509,3 +509,92 @@ h1, h2, h3 {
         gap: 2rem;
     }
 }
+
+/* =========================================
+   追加：モーダル関連スタイル（お問い合わせフォーム用）
+   ========================================= */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 2000;
+    opacity: 0; visibility: hidden;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.modal-overlay.open {
+    opacity: 1; visibility: visible;
+}
+.modal-card {
+    background: #fff;
+    width: 100%; max-width: 500px;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    max-height: 90vh;
+}
+.modal-title {
+    font-size: 1.5rem;
+    margin: 0 0 16px 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    text-align: center;
+    color: var(--primary-color);
+}
+.modal-scroll-area {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+.field { margin-bottom: 16px; text-align: left; }
+.field label {
+    display: block; font-weight: bold; margin-bottom: 6px; font-size: 0.95rem;
+}
+
+/* フォーム部品のスタイル */
+.field input,
+.field textarea,
+.field select {
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ddd; 
+    border-radius: 6px; 
+    font-size: 16px; 
+    background: #fafafa;
+    font-family: inherit;
+    resize: vertical; /* textarea用 */
+    box-sizing: border-box; /* パディングを含める */
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus { 
+    outline: none; 
+    border-color: var(--accent-color); 
+    background: #fff; 
+}
+
+.modal-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    border-top: 1px solid #eee;
+    padding-top: 16px;
+}
+.btn-simple {
+    background: #eee; color: #333;
+    border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer;
+}
+.btn-gold {
+    background: var(--primary-color); color: #fff;
+    border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer;
+}
+.btn-gold:hover { opacity: 0.9; }
+.center-align { text-align: center; }

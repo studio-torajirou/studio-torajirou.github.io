@@ -217,6 +217,18 @@
             </div>
         </section>
 
+        <section id="contact" class="section-container" style="scroll-margin-top: 100px;">
+            <div class="glass-box fade-in-scroll">
+                <h2 class="section-title">Contact</h2>
+                <div style="text-align: center; padding: 20px 0;">
+                    <p style="margin-bottom: 24px;">
+                        レッスンの内容やご予約についてなど、<br>
+                        気になることがあればお気軽にお問い合わせください。
+                    </p>
+                    <button id="btn-open-contact-form" class="btn-reserve">お問い合わせフォーム</button>
+                </div>
+            </div>
+        </section>
         <section id="access" class="section-container" style="scroll-margin-top: 100px;">
             <div class="glass-box fade-in-scroll">
                 <h2 class="section-title">Access</h2>
@@ -255,6 +267,60 @@
         <p>© 2025 studio 寅次郎 | 岩槻 Yoga Studio</p>
     </footer>
 
+    <div id="contactModal" class="modal-overlay">
+        <div class="modal-card">
+            <h3 class="modal-title">お問い合わせ</h3>
+            <div class="modal-scroll-area">
+                <p style="font-size:13px; color:#666; margin-bottom:16px;">
+                    以下のフォームにご入力の上、送信ボタンを押してください。
+                </p>
+                <div class="field">
+                    <label>お名前 <span style="color:var(--primary-color)">*</span></label>
+                    <input type="text" id="contact-name" placeholder="例：寅次郎 花子">
+                </div>
+                <div class="field">
+                    <label>電話番号</label>
+                    <input type="tel" id="contact-phone" placeholder="例：090-0000-0000">
+                </div>
+                <div class="field">
+                    <label>メールアドレス <span style="color:var(--primary-color)">*</span></label>
+                    <input type="email" id="contact-email" placeholder="例：example@gmail.com">
+                </div>
+                <div class="field">
+                    <label>ご用件 <span style="color:var(--primary-color)">*</span></label>
+                    <select id="contact-subject">
+                        <option value="レッスンについて">レッスンについて</option>
+                        <option value="ご予約について">ご予約について</option>
+                        <option value="その他">その他</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>お問い合わせ内容 <span style="color:var(--primary-color)">*</span></label>
+                    <textarea id="contact-body" rows="5" placeholder="ご質問内容をご記入ください"></textarea>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button id="btn-close-contact" class="btn-simple">閉じる</button>
+                <button id="btn-send-contact" class="btn-gold">送信する</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="contactSuccessModal" class="modal-overlay">
+        <div class="modal-card center-align">
+            <h3 class="modal-title" style="border:none; margin-bottom:10px;">送信完了</h3>
+            <div style="font-size: 40px; color: var(--accent-color); margin-bottom: 10px;">✔</div>
+            <p style="margin-bottom: 30px;">
+                お問い合わせありがとうございます。<br>
+                内容を確認次第、担当者よりご連絡いたします。
+            </p>
+            <div class="modal-actions" style="justify-content: center;">
+                <button id="btn-close-contact-success" class="btn-gold" style="flex: initial; padding:10px 40px;">OK</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="api.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
