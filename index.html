@@ -55,12 +55,12 @@
     <style>
         /* 画面読み込み時のちらつき防止 */
         body {
-            opacity: 0; /* 初期状態は透明 */
-            transition: opacity 0.8s ease-in-out; /* ふわっと表示 */
-            background-color: #FAFAF8; /* 背景色を一瞬白飛びさせないよう合わせる */
+            opacity: 0; 
+            transition: opacity 0.8s ease-in-out; 
+            background-color: #FAFAF8; 
         }
         body.is-loaded {
-            opacity: 1; /* 読み込み完了後に表示 */
+            opacity: 1; 
         }
 
         /* Instagramボタン用スタイル */
@@ -69,25 +69,25 @@
             gap: 20px;
             justify-content: center;
             flex-wrap: wrap;
-            margin: 60px 0 40px; /* 余白を広めに */
+            margin: 60px 0 40px; 
             position: relative;
-            z-index: 9999; /* 【修正】最前面に配置してクリックを確実に有効化 */
+            z-index: 9999;
         }
 
         .insta-btn {
             display: inline-flex;
             align-items: center;
-            /* Instagramカラーのグラデーション */
+            /* Instagramカラー */
             background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
             color: #ffffff;
             text-decoration: none;
-            padding: 24px 48px; /* 【修正】大きさを2倍に */
+            padding: 24px 48px; 
             border-radius: 60px;
             font-weight: bold;
-            font-size: 2rem; /* 【修正】文字サイズを2倍に */
+            font-size: 2rem; 
             transition: all 0.3s ease;
             box-shadow: 0 6px 10px rgba(0,0,0,0.15);
-            cursor: pointer; /* カーソルを指マークに */
+            cursor: pointer;
         }
 
         .insta-btn:hover {
@@ -97,16 +97,15 @@
         }
 
         .insta-btn i {
-            font-size: 2.8rem; /* 【修正】アイコンサイズも2倍に */
+            font-size: 2.8rem;
             margin-right: 20px;
         }
         
-        /* スマホ向け調整：画面からはみ出ないように縮小 */
         @media screen and (max-width: 768px) {
             .insta-btn {
                 padding: 16px 32px;
                 font-size: 1.2rem;
-                width: 90%; /* 横幅いっぱいに */
+                width: 90%; 
                 justify-content: center;
             }
             .insta-btn i {
@@ -227,12 +226,12 @@
         </section>
 
         <div class="insta-link-container fade-in-scroll">
-            <a href="https://www.instagram.com/asakohayama/?hl=ja" target="_blank" rel="noopener noreferrer" class="insta-btn">
+            <a id="insta-link-1" href="https://www.instagram.com/asakohayama/" target="_blank" rel="noopener noreferrer" class="insta-btn">
                 <i class="fab fa-instagram"></i>
                 <span>asako account</span>
             </a>
 
-            <a href="https://www.instagram.com/torajiro_yoga/?hl=ja" target="_blank" rel="noopener noreferrer" class="insta-btn">
+            <a id="insta-link-2" href="https://www.instagram.com/torajiro_yoga/" target="_blank" rel="noopener noreferrer" class="insta-btn">
                 <i class="fab fa-instagram"></i>
                 <span>torajiro account</span>
             </a>
@@ -403,8 +402,29 @@
 
     <script>
         window.addEventListener('load', function() {
-            // ページ内の全ての要素（画像やフォント含む）が読み込まれたら実行
+            // 1. FOUC対策：画面を表示する
             document.body.classList.add('is-loaded');
+
+            // 2. スマホ判定とInstagramリンクの書き換え処理
+            // iPhone, Androidなどを検出
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            
+            if (isMobile) {
+                // スマホの場合、URLスキーム（アプリ直接起動用URL）に書き換える
+                const link1 = document.getElementById('insta-link-1');
+                const link2 = document.getElementById('insta-link-2');
+
+                if (link1) {
+                    // instagram://user?username=ユーザー名 はアプリを直接開く命令
+                    link1.href = "instagram://user?username=asakohayama";
+                    // アプリで開くときは target="_blank" を外したほうが安定する場合がある
+                    link1.removeAttribute('target');
+                }
+                if (link2) {
+                    link2.href = "instagram://user?username=torajiro_yoga";
+                    link2.removeAttribute('target');
+                }
+            }
         });
     </script>
     </body>
