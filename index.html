@@ -22,6 +22,7 @@
     <meta property="og:url" content="https://studio-torajirou.github.io/">
     <meta property="og:image" content="https://studio-torajirou.github.io/asako_gemin-3.png">
     <meta property="og:locale" content="ja_JP">
+    
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="岩槻のヨガスタジオ studio 寅次郎">
     <meta name="twitter:description" content="心と体を整える。岩槻駅近くの初心者向けヨガ教室。">
@@ -39,6 +40,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Yomogi&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <script>
         var date = new Date();
         var cssLink = document.createElement("link");
@@ -50,60 +53,57 @@
         <link rel="stylesheet" href="style.css">
     </noscript>
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "YogaStudio",
-      "name": "studio 寅次郎",
-      "image": "https://studio-torajirou.github.io/asako_gemin-3.png",
-      "url": "https://studio-torajirou.github.io/",
-      "telephone": "+81-90-3546-9381", 
-      "description": "埼玉県さいたま市岩槻区にある初心者・シニア歓迎のヨガスタジオ。逆転アーサナ（ハンドスタンド等）の指導も行っています。",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "加倉１－１－４",
-        "addressLocality": "岩槻区",
-        "addressRegion": "埼玉県さいたま市",
-        "postalCode": "339-0056",
-        "addressCountry": "JP"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 35.950796, 
-        "longitude": 139.691378
-      },
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "岩槻区"
-        },
-        {
-          "@type": "City",
-          "name": "さいたま市"
+    <style>
+        /* FOUC対策：画面読み込み時のちらつき防止 */
+        body {
+            opacity: 0; /* 初期状態は透明 */
+            transition: opacity 0.6s ease-in-out; /* ふわっと表示させるアニメーション */
+            background-color: #FAFAF8; /* style.cssの背景色に合わせておく */
         }
-      ],
-      "priceRange": "2500円 - 18000円",
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday"
-          ],
-          "opens": "09:00",
-          "closes": "21:00"
+        /* JavaScriptで読み込み完了時にこのクラスが付与される */
+        body.is-loaded {
+            opacity: 1;
         }
-      ],
-      "hasMap": "https://goo.gl/maps/Q5Z5Z5Z5Z5Z5Z5Z5" 
-    }
-    </script>
-    
-</head>
+
+        /* Instagramボタン用スタイル */
+        .insta-link-container {
+            display: flex;
+            gap: 15px; /* ボタン間の隙間 */
+            justify-content: center; /* 中央寄せ */
+            flex-wrap: wrap; /* スマホなどで幅が足りない時は折り返す */
+            margin: 40px 0 20px; /* 上下の余白 */
+            position: relative;
+            z-index: 10;
+        }
+
+.insta-btn {
+            display: inline-flex;
+            align-items: center;
+            /* Instagramカラーのグラデーションに変更 */
+            background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 24px 48px; /* 大きさを2倍に */
+            border-radius: 60px; /* 角丸も少し調整 */
+            font-weight: bold;
+            font-size: 2rem; /* 文字サイズを2倍に */
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 10px rgba(0,0,0,0.15); /* 影も少し強く */
+        }
+
+        .insta-btn:hover {
+            transform: translateY(-3px); /* 浮き上がりを少し強く */
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            opacity: 0.95;
+        }
+
+        .insta-btn i {
+            font-size: 2.8rem; /* アイコンサイズも2倍に */
+            margin-right: 20px; /* アイコンと文字の間隔も調整 */
+        }
+
+    </style>
+    </head>
 <body>
     
     <h1 style="display:none;">岩槻のヨガスタジオ studio 寅次郎 | 初心者・シニア歓迎・逆転アーサナ専門</h1>
@@ -162,6 +162,17 @@
             </div>
         </section>
 
+        <div class="insta-link-container fade-in-scroll">
+            <a href="https://www.instagram.com/asakohayama/" target="_blank" rel="noopener noreferrer" class="insta-btn">
+                <i class="fab fa-instagram"></i>
+                <span>asako account</span>
+            </a>
+
+            <a href="https://www.instagram.com/torajiro_yoga/" target="_blank" rel="noopener noreferrer" class="insta-btn">
+                <i class="fab fa-instagram"></i>
+                <span>torajiro account</span>
+            </a>
+        </div>
         <section id="topics" class="section-container" style="scroll-margin-top: 100px;">
             <div class="glass-box">
                 <h2 class="section-title fade-in-scroll">Topics</h2>
@@ -178,7 +189,7 @@
                 <h2 class="section-title">Price</h2>
                 <dl class="price-list">
                     <div class="price-row">
-                    </div>
+                        </div>
                     <div class="price-row">
                         <dt>ドロップイン（1回）</dt>
                         <dd>2,500円</dd>
@@ -246,7 +257,7 @@
                     
                     <div class="map-container">
                         <iframe 
-                            src="https://maps.google.com/maps?q=%E5%9F%BC%E7%8E%89%E7%9C%8C%E3%81%95%E3%81%84%E3%81%9F%E3%81%BE%E5%B8%82%E5%B2%A9%E6%A7%BB%E5%8C%BA%E5%8A%A0%E5%80%89%EF%BC%91%EF%BC%8D%EF%BC%91%EF%BC%8D%EF%BC%94&output=embed"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3233.123456789!2d139.691610!3d35.948506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDU2JzU0LjYiTiAxMznCsDQxJzI5LjgiRQ!5e0!3m2!1sja!2sjp!4v1600000000000!5m2!1sja!2sjp"
                             width="100%" 
                             height="400" 
                             style="border:0;" 
@@ -258,7 +269,7 @@
                     </div>
                     
                     <div class="btn-area">
-                        <a href="https://www.google.com/maps/search/?api=1&query=%E5%9F%BC%E7%8E%89%E7%9C%8C%E3%81%95%E3%81%84%E3%81%9F%E3%81%BE%E5%B8%82%E5%B2%A9%E6%A7%BB%E5%8C%BA%E5%8A%A0%E5%80%89%EF%BC%91%EF%BC%8D%EF%BC%91%EF%BC%8D%EF%BC%94" target="_blank" class="btn-reserve map-link-btn" rel="noopener noreferrer">Googleマップで開く</a>
+                        <a href="https://maps.google.com/?q=35.948506,139.691610" target="_blank" class="btn-reserve map-link-btn" rel="noopener noreferrer">Googleマップで開く</a>
                     </div>
                 </div>
             </div>
@@ -325,5 +336,38 @@
     
     <script src="api.js"></script>
     <script src="script.js"></script>
-</body>
+
+    <script>
+        window.addEventListener('load', function() {
+            // ページ内の全ての要素（画像やフォント含む）が読み込まれたら実行
+            document.body.classList.add('is-loaded');
+        });
+    </script>
+    </body>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "YogaStudio",
+  "name": "Studio寅次郎",
+  "image": "https://raw.githubusercontent.com/studio-torajirou/yoyaku/main/yoyaku_hiro.png",
+  "url": "https://studio-torajirou.github.io/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "加倉１丁目１−４",
+    "addressLocality": "さいたま市岩槻区",
+    "addressRegion": "埼玉県",
+    "postalCode": "339-0056",
+    "addressCountry": "JP"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 35.94850658980967,
+    "longitude": 139.69161020755539
+  },
+  "priceRange": "¥2,500〜",
+  "description": "埼玉県さいたま市岩槻区のヨガスタジオ。営業時間はレッスンスケジュールによります。"
+}
+</script>
+
 </html>
