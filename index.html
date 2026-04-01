@@ -79,6 +79,7 @@
         .id-copy-area {
             display: flex;
             flex-direction: column;
+            align-items: center; /* 修正: 子要素（ボタン）を中央に配置 */
             gap: 15px;
             width: 100%;
         }
@@ -91,7 +92,8 @@
             background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
             color: #fff;
             text-decoration: none;
-            width: 100%;
+            width: 85%; /* 修正: 100%から少し幅を狭める */
+            max-width: 350px; /* 修正: PC等で広がりすぎるのを防ぐ最大幅 */
             padding: 18px;
             border-radius: 50px;
             font-weight: bold;
